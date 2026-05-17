@@ -65,7 +65,11 @@ struct PDFReportService: PDFReportGenerating {
                 ).integral
 
                 ensureSpace(rect.height + spacing)
-                attributed.draw(with: CGRect(x: margin, y: y, width: contentWidth, height: rect.height))
+                attributed.draw(
+                    with: CGRect(x: margin, y: y, width: contentWidth, height: rect.height),
+                    options: [.usesLineFragmentOrigin, .usesFontLeading],
+                    context: nil
+                )
                 y += rect.height + spacing
             }
 
