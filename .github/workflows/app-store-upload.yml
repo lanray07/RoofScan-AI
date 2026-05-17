@@ -21,9 +21,6 @@ jobs:
       PROJECT_PATH: RoofScan AI.xcodeproj
       SCHEME_NAME: RoofScan AI
       BUNDLE_ID: com.roofscanai.app
-      ARCHIVE_PATH: ${{ runner.temp }}/RoofScanAI.xcarchive
-      EXPORT_PATH: ${{ runner.temp }}/export
-      API_KEY_PATH: ${{ runner.temp }}/private_keys/AuthKey_${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}.p8
       APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
       APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
       APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
@@ -35,6 +32,16 @@ jobs:
 
       - name: Show Xcode version
         run: xcodebuild -version
+
+      - name: Prepare build paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            echo "ARCHIVE_PATH=$RUNNER_TEMP/RoofScanAI.xcarchive"
+            echo "EXPORT_PATH=$RUNNER_TEMP/export"
+            echo "API_KEY_PATH=$RUNNER_TEMP/private_keys/AuthKey_${APP_STORE_CONNECT_API_KEY_ID}.p8"
+          } >> "$GITHUB_ENV"
 
       - name: Validate required secrets
         shell: bash
