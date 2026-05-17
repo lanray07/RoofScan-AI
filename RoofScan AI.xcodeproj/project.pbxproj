@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000000201 /* RoofScanAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000101 /* RoofScanAIApp.swift */; };
+		000000000000000000000202 /* RoofModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000102 /* RoofModels.swift */; };
+		000000000000000000000203 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000103 /* MockData.swift */; };
+		000000000000000000000204 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000104 /* AppConstants.swift */; };
+		000000000000000000000205 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000105 /* AppRouter.swift */; };
+		000000000000000000000206 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000106 /* Formatters.swift */; };
+		000000000000000000000207 /* EnvironmentValues+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000107 /* EnvironmentValues+Services.swift */; };
+		000000000000000000000208 /* ImageUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000108 /* ImageUtilities.swift */; };
+		000000000000000000000209 /* AIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000109 /* AIService.swift */; };
+		000000000000000000000210 /* MockAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000110 /* MockAIService.swift */; };
+		000000000000000000000211 /* RemoteAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000111 /* RemoteAIService.swift */; };
+		000000000000000000000212 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000112 /* SubscriptionManager.swift */; };
+		000000000000000000000213 /* PDFReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000113 /* PDFReportService.swift */; };
+		000000000000000000000214 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000114 /* PermissionManager.swift */; };
+		000000000000000000000215 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000115 /* DashboardViewModel.swift */; };
+		000000000000000000000216 /* InspectionFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000116 /* InspectionFormViewModel.swift */; };
+		000000000000000000000217 /* PhotoCaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000117 /* PhotoCaptureViewModel.swift */; };
+		000000000000000000000218 /* RoofScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000118 /* RoofScanViewModel.swift */; };
+		000000000000000000000219 /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000119 /* ReportViewModel.swift */; };
+		000000000000000000000220 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000120 /* SettingsViewModel.swift */; };
+		000000000000000000000221 /* SeverityBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000121 /* SeverityBadge.swift */; };
+		000000000000000000000222 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000122 /* EmptyStateView.swift */; };
+		000000000000000000000223 /* InspectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000123 /* InspectionCard.swift */; };
+		000000000000000000000224 /* RoofPhotoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000124 /* RoofPhotoCard.swift */; };
+		000000000000000000000225 /* RoofIssueCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000125 /* RoofIssueCard.swift */; };
+		000000000000000000000226 /* ReportPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000126 /* ReportPreviewView.swift */; };
+		000000000000000000000227 /* UpgradeBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000127 /* UpgradeBanner.swift */; };
+		000000000000000000000228 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000128 /* PaywallView.swift */; };
+		000000000000000000000229 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000129 /* AppRootView.swift */; };
+		000000000000000000000230 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000130 /* OnboardingView.swift */; };
+		000000000000000000000231 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000131 /* DashboardView.swift */; };
+		000000000000000000000232 /* NewInspectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000132 /* NewInspectionView.swift */; };
+		000000000000000000000233 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000133 /* PhotoCaptureView.swift */; };
+		000000000000000000000234 /* AIScanOutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000134 /* AIScanOutputView.swift */; };
+		000000000000000000000235 /* IssueReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000135 /* IssueReviewView.swift */; };
+		000000000000000000000236 /* ReportGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000136 /* ReportGeneratorView.swift */; };
+		000000000000000000000237 /* SavedInspectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000137 /* SavedInspectionsView.swift */; };
+		000000000000000000000238 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000138 /* SettingsView.swift */; };
+		000000000000000000000239 /* InspectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000139 /* InspectionDetailView.swift */; };
+		000000000000000000000290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000190 /* Assets.xcassets */; };
+		000000000000000000000292 /* StoreKitConfiguration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000192 /* StoreKitConfiguration.storekit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000000000000000000000004 /* RoofScan AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RoofScan AI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000101 /* RoofScanAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoofScanAIApp.swift; sourceTree = "<group>"; };
+		000000000000000000000102 /* RoofModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoofModels.swift; sourceTree = "<group>"; };
+		000000000000000000000103 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		000000000000000000000104 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		000000000000000000000105 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		000000000000000000000106 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		000000000000000000000107 /* EnvironmentValues+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Services.swift"; sourceTree = "<group>"; };
+		000000000000000000000108 /* ImageUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtilities.swift; sourceTree = "<group>"; };
+		000000000000000000000109 /* AIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIService.swift; sourceTree = "<group>"; };
+		000000000000000000000110 /* MockAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAIService.swift; sourceTree = "<group>"; };
+		000000000000000000000111 /* RemoteAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAIService.swift; sourceTree = "<group>"; };
+		000000000000000000000112 /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		000000000000000000000113 /* PDFReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFReportService.swift; sourceTree = "<group>"; };
+		000000000000000000000114 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
+		000000000000000000000115 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000000116 /* InspectionFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionFormViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000000117 /* PhotoCaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000000118 /* RoofScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoofScanViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000000119 /* ReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000000120 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000000121 /* SeverityBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeverityBadge.swift; sourceTree = "<group>"; };
+		000000000000000000000122 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		000000000000000000000123 /* InspectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionCard.swift; sourceTree = "<group>"; };
+		000000000000000000000124 /* RoofPhotoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoofPhotoCard.swift; sourceTree = "<group>"; };
+		000000000000000000000125 /* RoofIssueCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoofIssueCard.swift; sourceTree = "<group>"; };
+		000000000000000000000126 /* ReportPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportPreviewView.swift; sourceTree = "<group>"; };
+		000000000000000000000127 /* UpgradeBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeBanner.swift; sourceTree = "<group>"; };
+		000000000000000000000128 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		000000000000000000000129 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		000000000000000000000130 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		000000000000000000000131 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		000000000000000000000132 /* NewInspectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInspectionView.swift; sourceTree = "<group>"; };
+		000000000000000000000133 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
+		000000000000000000000134 /* AIScanOutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIScanOutputView.swift; sourceTree = "<group>"; };
+		000000000000000000000135 /* IssueReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueReviewView.swift; sourceTree = "<group>"; };
+		000000000000000000000136 /* ReportGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportGeneratorView.swift; sourceTree = "<group>"; };
+		000000000000000000000137 /* SavedInspectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedInspectionsView.swift; sourceTree = "<group>"; };
+		000000000000000000000138 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		000000000000000000000139 /* InspectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionDetailView.swift; sourceTree = "<group>"; };
+		000000000000000000000190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		000000000000000000000191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000000000000000192 /* StoreKitConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StoreKitConfiguration.storekit; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000000000000000000000007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000010 /* RoofScan AI */,
+				000000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		000000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000004 /* RoofScan AI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000000000000000000000010 /* RoofScan AI */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000101 /* RoofScanAIApp.swift */,
+				000000000000000000000011 /* Models */,
+				000000000000000000000012 /* Views */,
+				000000000000000000000013 /* ViewModels */,
+				000000000000000000000014 /* Services */,
+				000000000000000000000015 /* Components */,
+				000000000000000000000016 /* Utilities */,
+				000000000000000000000017 /* Resources */,
+			);
+			path = "RoofScan AI";
+			sourceTree = "<group>";
+		};
+		000000000000000000000011 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000102 /* RoofModels.swift */,
+				000000000000000000000103 /* MockData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		000000000000000000000012 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000129 /* AppRootView.swift */,
+				000000000000000000000130 /* OnboardingView.swift */,
+				000000000000000000000131 /* DashboardView.swift */,
+				000000000000000000000132 /* NewInspectionView.swift */,
+				000000000000000000000133 /* PhotoCaptureView.swift */,
+				000000000000000000000134 /* AIScanOutputView.swift */,
+				000000000000000000000135 /* IssueReviewView.swift */,
+				000000000000000000000136 /* ReportGeneratorView.swift */,
+				000000000000000000000137 /* SavedInspectionsView.swift */,
+				000000000000000000000138 /* SettingsView.swift */,
+				000000000000000000000139 /* InspectionDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		000000000000000000000013 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000115 /* DashboardViewModel.swift */,
+				000000000000000000000116 /* InspectionFormViewModel.swift */,
+				000000000000000000000117 /* PhotoCaptureViewModel.swift */,
+				000000000000000000000118 /* RoofScanViewModel.swift */,
+				000000000000000000000119 /* ReportViewModel.swift */,
+				000000000000000000000120 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		000000000000000000000014 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000109 /* AIService.swift */,
+				000000000000000000000110 /* MockAIService.swift */,
+				000000000000000000000111 /* RemoteAIService.swift */,
+				000000000000000000000112 /* SubscriptionManager.swift */,
+				000000000000000000000113 /* PDFReportService.swift */,
+				000000000000000000000114 /* PermissionManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		000000000000000000000015 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000121 /* SeverityBadge.swift */,
+				000000000000000000000122 /* EmptyStateView.swift */,
+				000000000000000000000123 /* InspectionCard.swift */,
+				000000000000000000000124 /* RoofPhotoCard.swift */,
+				000000000000000000000125 /* RoofIssueCard.swift */,
+				000000000000000000000126 /* ReportPreviewView.swift */,
+				000000000000000000000127 /* UpgradeBanner.swift */,
+				000000000000000000000128 /* PaywallView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		000000000000000000000016 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000104 /* AppConstants.swift */,
+				000000000000000000000105 /* AppRouter.swift */,
+				000000000000000000000106 /* Formatters.swift */,
+				000000000000000000000107 /* EnvironmentValues+Services.swift */,
+				000000000000000000000108 /* ImageUtilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		000000000000000000000017 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000190 /* Assets.xcassets */,
+				000000000000000000000191 /* Info.plist */,
+				000000000000000000000192 /* StoreKitConfiguration.storekit */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000000000000000000000005 /* RoofScan AI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000405 /* Build configuration list for PBXNativeTarget "RoofScan AI" */;
+			buildPhases = (
+				000000000000000000000006 /* Sources */,
+				000000000000000000000007 /* Frameworks */,
+				000000000000000000000008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RoofScan AI";
+			productName = "RoofScan AI";
+			productReference = 000000000000000000000004 /* RoofScan AI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					000000000000000000000005 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 000000000000000000000406 /* Build configuration list for PBXProject "RoofScan AI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000000000000000000000002;
+			productRefGroup = 000000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000000000000000000000005 /* RoofScan AI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000000000000000000000008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000290 /* Assets.xcassets in Resources */,
+				000000000000000000000292 /* StoreKitConfiguration.storekit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000000000000000000000006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000201 /* RoofScanAIApp.swift in Sources */,
+				000000000000000000000202 /* RoofModels.swift in Sources */,
+				000000000000000000000203 /* MockData.swift in Sources */,
+				000000000000000000000204 /* AppConstants.swift in Sources */,
+				000000000000000000000205 /* AppRouter.swift in Sources */,
+				000000000000000000000206 /* Formatters.swift in Sources */,
+				000000000000000000000207 /* EnvironmentValues+Services.swift in Sources */,
+				000000000000000000000208 /* ImageUtilities.swift in Sources */,
+				000000000000000000000209 /* AIService.swift in Sources */,
+				000000000000000000000210 /* MockAIService.swift in Sources */,
+				000000000000000000000211 /* RemoteAIService.swift in Sources */,
+				000000000000000000000212 /* SubscriptionManager.swift in Sources */,
+				000000000000000000000213 /* PDFReportService.swift in Sources */,
+				000000000000000000000214 /* PermissionManager.swift in Sources */,
+				000000000000000000000215 /* DashboardViewModel.swift in Sources */,
+				000000000000000000000216 /* InspectionFormViewModel.swift in Sources */,
+				000000000000000000000217 /* PhotoCaptureViewModel.swift in Sources */,
+				000000000000000000000218 /* RoofScanViewModel.swift in Sources */,
+				000000000000000000000219 /* ReportViewModel.swift in Sources */,
+				000000000000000000000220 /* SettingsViewModel.swift in Sources */,
+				000000000000000000000221 /* SeverityBadge.swift in Sources */,
+				000000000000000000000222 /* EmptyStateView.swift in Sources */,
+				000000000000000000000223 /* InspectionCard.swift in Sources */,
+				000000000000000000000224 /* RoofPhotoCard.swift in Sources */,
+				000000000000000000000225 /* RoofIssueCard.swift in Sources */,
+				000000000000000000000226 /* ReportPreviewView.swift in Sources */,
+				000000000000000000000227 /* UpgradeBanner.swift in Sources */,
+				000000000000000000000228 /* PaywallView.swift in Sources */,
+				000000000000000000000229 /* AppRootView.swift in Sources */,
+				000000000000000000000230 /* OnboardingView.swift in Sources */,
+				000000000000000000000231 /* DashboardView.swift in Sources */,
+				000000000000000000000232 /* NewInspectionView.swift in Sources */,
+				000000000000000000000233 /* PhotoCaptureView.swift in Sources */,
+				000000000000000000000234 /* AIScanOutputView.swift in Sources */,
+				000000000000000000000235 /* IssueReviewView.swift in Sources */,
+				000000000000000000000236 /* ReportGeneratorView.swift in Sources */,
+				000000000000000000000237 /* SavedInspectionsView.swift in Sources */,
+				000000000000000000000238 /* SettingsView.swift in Sources */,
+				000000000000000000000239 /* InspectionDetailView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000000401 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "RoofScan AI/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roofscanai.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		000000000000000000000402 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "RoofScan AI/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roofscanai.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		000000000000000000000403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		000000000000000000000404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000000000000000000000405 /* Build configuration list for PBXNativeTarget "RoofScan AI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000401 /* Debug */,
+				000000000000000000000402 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000406 /* Build configuration list for PBXProject "RoofScan AI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000403 /* Debug */,
+				000000000000000000000404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000000001 /* Project object */;
+}
