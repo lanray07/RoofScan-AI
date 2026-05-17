@@ -15,7 +15,7 @@ concurrency:
 jobs:
   upload:
     name: Archive and upload
-    runs-on: macos-15
+    runs-on: macos-26
     timeout-minutes: 60
     env:
       PROJECT_PATH: RoofScan AI.xcodeproj
@@ -29,6 +29,13 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
+      - name: Select Xcode 26
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcode_app="$(ls -d /Applications/Xcode_26*.app /Applications/Xcode.app 2>/dev/null | tail -n 1)"
+          sudo xcode-select -s "$xcode_app/Contents/Developer"
 
       - name: Show Xcode version
         run: xcodebuild -version
