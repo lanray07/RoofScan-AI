@@ -15,6 +15,11 @@ struct PaywallView: View {
                 }
                 .padding(.top, 10)
 
+                if subscriptionManager.isLoading {
+                    ProgressView("Loading subscription options...")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+
                 planCard(
                     plan: .free,
                     features: [
@@ -72,6 +77,8 @@ struct PaywallView: View {
                         .foregroundStyle(.secondary)
                 }
 
+                legalLinks
+
                 if let error = subscriptionManager.errorMessage {
                     Text(error)
                         .font(.footnote)
@@ -82,6 +89,9 @@ struct PaywallView: View {
         }
         .background(AppTheme.pageBackground)
         .navigationTitle("Plans")
+        .task {
+            await subscriptionManager.loadProducts()
+        }
     }
 
     private func planCard(plan: SubscriptionPlan, features: [String]) -> some View {
@@ -90,7 +100,7 @@ struct PaywallView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(plan.displayName)
                         .font(.title3.weight(.bold))
-                    Text(plan.priceText)
+                    Text("\(subscriptionManager.displayPrice(for: plan)) - \(subscriptionManager.subscriptionLengthText(for: plan))")
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
@@ -119,5 +129,21 @@ struct PaywallView: View {
         .padding(16)
         .background(AppTheme.cardBackground)
         .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+    }
+
+    private var legalLinks: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Payment is charged to your Apple Account and managed by Apple.")
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+
+            HStack(spacing: 12) {
+                Link("Privacy Policy", destination: AppConstants.privacyPolicyURL)
+                Link("Terms of Use (EULA)", destination: AppConstants.termsOfUseURL)
+            }
+            .font(.footnote.weight(.semibold))
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.top, 4)
     }
 }

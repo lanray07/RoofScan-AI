@@ -3,7 +3,11 @@ import SwiftUI
 
 @main
 struct RoofScanAIApp: App {
+    #if DEBUG
     @State private var subscriptionManager = SubscriptionManager(useMockState: true)
+    #else
+    @State private var subscriptionManager = SubscriptionManager(useMockState: false)
+    #endif
 
     var body: some Scene {
         WindowGroup {

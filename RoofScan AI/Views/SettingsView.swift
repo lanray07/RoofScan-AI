@@ -70,6 +70,8 @@ struct SettingsView: View {
             }
 
             Section("Safety and Legal") {
+                Link("Open Privacy Policy", destination: AppConstants.privacyPolicyURL)
+                Link("Open Terms of Use (EULA)", destination: AppConstants.termsOfUseURL)
                 NavigationLink("Privacy Policy") {
                     LegalTextView(title: "Privacy Policy", text: privacyText)
                 }
@@ -157,7 +159,8 @@ struct SettingsView: View {
         """
         RoofScan AI stores inspections, roof photos, findings, and generated reports locally on this device using SwiftData. Remote AI mode should send photo data only to your secure backend endpoint. Do not place third-party AI API keys in the iOS app.
 
-        Before App Store submission, replace this placeholder with your complete privacy policy, including data collection, retention, deletion, analytics, support, and backend processing details.
+        Privacy Policy:
+        \(AppConstants.privacyPolicyURL.absoluteString)
         """
     }
 
@@ -165,7 +168,10 @@ struct SettingsView: View {
         """
         RoofScan AI provides visual inspection workflow tools and AI-generated suggestions. Users remain responsible for safe photo capture, professional verification, client communication, and compliance with local laws and industry standards.
 
-        Before App Store submission, replace this placeholder with production terms of use and subscription terms.
+        Auto-renewable subscriptions are purchased through Apple StoreKit. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Manage or cancel subscriptions in your Apple Account settings.
+
+        Terms of Use (EULA):
+        \(AppConstants.termsOfUseURL.absoluteString)
         """
     }
 }

@@ -54,6 +54,8 @@ final class SubscriptionManager {
     }
 
     func purchase(_ plan: SubscriptionPlan) async {
+        errorMessage = nil
+
         if usesMockState {
             activateMockPlan(plan)
             return
@@ -66,8 +68,12 @@ final class SubscriptionManager {
             return
         }
 
+        if products.isEmpty {
+            await loadProducts()
+        }
+
         guard let product = products.first(where: { $0.id == productID }) else {
-            errorMessage = "Subscription product is unavailable."
+            errorMessage = "Subscription product is unavailable. Please check your connection and try again."
             return
         }
 
@@ -137,6 +143,27 @@ final class SubscriptionManager {
         return "Free plan"
     }
 
+    func displayPrice(for plan: SubscriptionPlan) -> String {
+        guard !usesMockState,
+              let productID = plan.productID,
+              let product = products.first(where: { $0.id == productID }) else {
+            return plan.priceText
+        }
+
+        return product.displayPrice
+    }
+
+    func subscriptionLengthText(for plan: SubscriptionPlan) -> String {
+        guard !usesMockState,
+              let productID = plan.productID,
+              let product = products.first(where: { $0.id == productID }),
+              let period = product.subscription?.subscriptionPeriod else {
+            return plan.subscriptionLengthText
+        }
+
+        return period.roofScanDisplayName
+    }
+
     private func refreshEntitlements() async {
         var bestPlan: SubscriptionPlan = .free
         var bestExpiration: Date?
@@ -183,5 +210,26 @@ private enum StoreKitVerificationError: LocalizedError {
 
     var errorDescription: String? {
         "The App Store transaction could not be verified."
+    }
+}
+
+private extension Product.SubscriptionPeriod {
+    var roofScanDisplayName: String {
+        let unitName: String
+
+        switch unit {
+        case .day:
+            unitName = "day"
+        case .week:
+            unitName = "week"
+        case .month:
+            unitName = "month"
+        case .year:
+            unitName = "year"
+        @unknown default:
+            unitName = "period"
+        }
+
+        return value == 1 ? "1 \(unitName)" : "\(value) \(unitName)s"
     }
 }

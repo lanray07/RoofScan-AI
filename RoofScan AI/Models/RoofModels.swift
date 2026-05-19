@@ -227,10 +227,18 @@ enum SubscriptionPlan: String, CaseIterable, Identifiable, Codable {
 
     var priceText: String {
         switch self {
-        case .free: "£0"
-        case .proMonthly: "£24.99 / month"
-        case .proYearly: "£199.99 / year"
-        case .businessMonthly: "£79.99 / month"
+        case .free: "GBP 0"
+        case .proMonthly: "GBP 24.99 / month"
+        case .proYearly: "GBP 199.99 / year"
+        case .businessMonthly: "GBP 79.99 / month"
+        }
+    }
+
+    var subscriptionLengthText: String {
+        switch self {
+        case .free: "No renewal"
+        case .proMonthly, .businessMonthly: "1 month"
+        case .proYearly: "1 year"
         }
     }
 
